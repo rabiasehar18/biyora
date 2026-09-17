@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>biyora ♡</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap');
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:#fffaf5;
+    color:#542c35;
+    font-family:"DM Sans",sans-serif;
+}
+
+
+/* ================= TOP BAR ================= */
+
+.topbar{
+    height:35px;
+    background:#a86d83;
+    color:white;
+
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+
+    font-size:12px;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header{
+    height:82px;
+    padding:0 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#fffaf5;
+
+    border-bottom:1px solid #f1dedf;
+
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    text-decoration:none;
+    color:#542c35;
+}
+
+.logo-icon{
+    font-size:42px;
+    color:#cf7091;
+}
+
+.logo-name{
+    font:40px "Patrick Hand";
+    display:block;
+    line-height:30px;
+}
+
+.logo-small{
+    font-size:8px;
+    letter-spacing:3px;
+    display:block;
+}
+
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#542c35;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#c96489;
+}
+
+
+.icons{
+    display:flex;
+    gap:15px;
+}
+
+.icons button{
+    border:none;
+    background:none;
+
+    font-size:23px;
+
+    cursor:pointer;
+
+    position:relative;
+}
+
+.cart-number{
+    position:absolute;
+
+    right:-7px;
+    top:-7px;
+
+    background:#a86d83;
+    color:white;
+
+    border-radius:50%;
+
+    font-size:9px;
+
+    padding:3px 6px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:470px;
+
+    padding:55px 7%;
+
+    display:grid;
+
+    grid-template-columns:46% 54%;
+
+    background:#faeee8;
+}
+
+
+.hero-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+
+.eyebrow{
+    font:21px "Patrick Hand";
+    color:#9d5b70;
+
+    margin:0 0 10px;
+}
+
+
+.hero h1{
+    font:58px/1.02 "Patrick Hand";
+
+    margin:0;
+
+    color:#582b34;
+}
+
+
+.hero h1 span{
+    color:#d36d91;
+}
+
+
+.hero-description{
+    max-width:470px;
+
+    color:#765e62;
+
+    line-height:1.7;
+}
+
+
+.buttons{
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+
+.btn{
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+
+.shop-btn{
+    background:#d16d91;
+    color:white;
+}
+
+
+.explore-btn{
+    border:1px solid #b96c83;
+
+    color:#9e536c;
+
+    background:#fffaf5;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+
+.hero-box{
+    width:78%;
+    height:320px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #e7c6d6,
+        #f4d4c5,
+        #d9c7e1
+    );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    font-size:65px;
+
+    transform:rotate(2deg);
+
+    box-shadow:15px 17px #e8d1d7;
+}
+
+
+.hero-box-text{
+    font:29px "Patrick Hand";
+}
+
+
+.doodle{
+    position:absolute;
+
+    font:25px "Patrick Hand";
+}
+
+
+.doodle-one{
+    right:0;
+    top:15px;
+}
+
+
+.doodle-two{
+    right:0;
+    bottom:5px;
+}
+
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+    padding:30px 7%;
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:20px;
+
+    background:#fffaf5;
+}
+
+
+.category{
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:#673544;
+
+    font:18px "Patrick Hand";
+
+    text-align:center;
+}
+
+
+.category-icon{
+    width:80px;
+    height:80px;
+
+    margin:0 auto 8px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#f6dbe4;
+
+    border-radius:50%;
+
+    font-size:30px;
+
+    transition:.2s;
+}
+
+
+.category:nth-child(even)
+.category-icon{
+    background:#ead9e9;
+}
+
+
+.category:hover
+.category-icon{
+    transform:translateY(-5px);
+}
+
+
+/* ================= SHOP ================= */
+
+.shop{
+    padding:35px 5% 55px;
+}
+
+
+.shop-heading{
+    display:flex;
+
+    align-items:end;
+
+    justify-content:space-between;
+
+    margin-bottom:25px;
+}
+
+
+.mini{
+    font:20px "Patrick Hand";
+
+    color:#9c596f;
+
+    margin:0;
+}
+
+
+.shop-heading h2{
+    font:37px "Patrick Hand";
+
+    margin:0;
+}
+
+
+.shop-subtitle{
+    margin:3px 0;
+
+    font-size:13px;
+
+    color:#80666b;
+}
+
+
+.view-all{
+    border:none;
+
+    background:none;
+
+    color:#c45e83;
+
+    cursor:pointer;
+}
+
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+}
+
+
+.product{
+    background:white;
+
+    padding:10px;
+
+    border-radius:16px;
+
+    box-shadow:
+    0 5px 18px #6c3c4515;
+
+    transition:.2s;
+}
+
+
+.product:hover{
+    transform:translateY(-5px);
+}
+
+
+.product-image{
+    height:210px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:65px;
+}
+
+
+.product-image small{
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    opacity:.55;
+}
+
+
+.pink{
+    background:#ead5dc;
+}
+
+.lilac{
+    background:#dfcfe4;
+}
+
+.peach{
+    background:#f2ddd0;
+}
+
+.rose{
+    background:#f0ced7;
+}
+
+
+.product h3{
+    font-size:14px;
+
+    margin:12px 4px 4px;
+}
+
+
+.price{
+    color:#a4526b;
+
+    font-weight:700;
+
+    margin:0 4px 10px;
+}
+
+
+.add{
+    width:100%;
+
+    border:none;
+
+    background:#d16d91;
+
+    color:white;
+
+    padding:10px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    font-weight:600;
+}
+
+
+/* ================= BENEFITS ================= */
+
+.benefits{
+    margin:0 5% 50px;
+
+    padding:22px;
+
+    background:#f8e6eb;
+
+    border-radius:20px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+}
+
+
+.benefit{
+    text-align:center;
+
+    border-right:1px solid #e3c7cf;
+
+    font-size:25px;
+}
+
+
+.benefit:last-child{
+    border:none;
+}
+
+
+.benefit b{
+    display:block;
+
+    font-size:13px;
+}
+
+
+.benefit small{
+    display:block;
+
+    font-size:11px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about{
+    padding:55px 7%;
+
+    background:#fff2eb;
+
+    display:grid;
+
+    grid-template-columns:1.1fr 1fr .35fr;
+
+    gap:35px;
+
+    align-items:center;
+}
+
+
+.about-photo{
+    height:270px;
+
+    border-radius:22px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #e4c4d5,
+        #f1d4c4
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:65px;
+
+    box-shadow:-10px 10px #e5cbd2;
+}
+
+
+.about h2{
+    font:38px "Patrick Hand";
+
+    margin:0;
+}
+
+
+.about p{
+    color:#735c60;
+
+    line-height:1.7;
+}
+
+
+.note{
+    background:#dec4df;
+
+    padding:25px;
+
+    text-align:center;
+
+    font:25px "Patrick Hand";
+
+    transform:rotate(-4deg);
+}
+
+
+/* ================= NEWSLETTER ================= */
+
+.newsletter{
+    padding:35px 7%;
+
+    background:#ead4e6;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+
+.newsletter h2{
+    font:31px "Patrick Hand";
+
+    margin:0;
+}
+
+
+.newsletter p{
+    font-size:13px;
+}
+
+
+.newsletter form{
+    background:white;
+
+    padding:4px;
+
+    border-radius:30px;
+
+    display:flex;
+}
+
+
+.newsletter input{
+    border:none;
+
+    outline:none;
+
+    padding:10px 17px;
+
+    width:240px;
+}
+
+
+.newsletter button{
+    border:none;
+
+    border-radius:25px;
+
+    background:#d16d91;
+
+    color:white;
+
+    padding:10px 20px;
+
+    cursor:pointer;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:45px 7%;
+
+    display:grid;
+
+    grid-template-columns:
+    1.5fr 1fr 1fr 1.3fr;
+
+    gap:35px;
+}
+
+
+.footer-logo{
+    font:36px "Patrick Hand";
+}
+
+
+footer h3{
+    font-size:14px;
+}
+
+
+footer a,
+footer p{
+    display:block;
+
+    color:#72575d;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    margin:9px 0;
+}
+
+
+footer a:hover{
+    color:#c45e83;
+}
+
+
+.copyright{
+    background:#a86d83;
+
+    color:white;
+
+    padding:13px 6%;
+
+    font-size:11px;
+
+    display:flex;
+
+    justify-content:space-between;
+}
+
+
+/* ================= TOAST ================= */
+
+#toast{
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    background:#542c35;
+
+    color:white;
+
+    padding:13px 20px;
+
+    border-radius:25px;
+
+    display:none;
+
+    z-index:999;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero-image{
+        min-height:330px;
+    }
+
+    .products{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .categories{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+    .benefits{
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:15px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .newsletter{
+        display:block;
+    }
+
+    .newsletter form{
+        width:max-content;
+
+        margin-top:15px;
+    }
+
+    footer{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:550px){
+
+    .topbar span:last-child{
+        display:none;
+    }
+
+    header{
+        height:70px;
+    }
+
+    .logo-name{
+        font-size:32px;
+    }
+
+    .hero{
+        padding:35px 6%;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero-box{
+        width:90%;
+        height:250px;
+    }
+
+    .categories{
+        grid-template-columns:
+        repeat(2,1fr);
+
+        padding:25px 4%;
+    }
+
+    .products{
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:10px;
+    }
+
+    .product-image{
+        height:150px;
+    }
+
+    .benefits{
+        grid-template-columns:1fr;
+
+        margin:0 4% 30px;
+    }
+
+    .benefit{
+        border:none;
+
+        border-bottom:1px solid #e3c7cf;
+
+        padding:10px;
+    }
+
+    .benefit:last-child{
+        border:none;
+    }
+
+    .newsletter input{
+        width:160px;
+    }
+
+    footer{
+        grid-template-columns:1fr;
+    }
+
+    .copyright{
+        display:block;
+    }
+
+    .copyright span{
+        display:block;
+
+        margin-top:5px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= TOP ================= -->
+
+<div class="topbar">
+
+    <span>
+        ✿ Small pieces ✦ Big happiness ✿
+    </span>
+
+    <span>
+        🚚 Free delivery on orders over Rs. 2000
+    </span>
+
+</div>
+
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+    <a href="#home" class="logo">
+
+        <span class="logo-icon">
+            ୨୧
+        </span>
+
+        <span>
+
+            <strong class="logo-name">
+                biyora ♡
+            </strong>
+
+            <small class="logo-small">
+                CRAFTS • GIFTS • MORE
+            </small>
+
+        </span>
+
+    </a>
+
+
+    <nav>
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#shop">
+            Shop
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="icons">
+
+        <button onclick="searchProducts()">
+            ⌕
+        </button>
+
+        <button onclick="showCart()">
+
+            🛍
+
+            <span
+                class="cart-number"
+                id="cartCount"
+            >
+                0
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<main id="home">
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <p class="eyebrow">
+            Handmade with love ♡
+        </p>
+
+
+        <h1>
+
+            Cute things for your everyday
+
+            <span>
+                happiness ♡
+            </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Bracelets, crochet, handmade gifts,
+            stationery & more — made with love
+            for dreamers like you.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                href="#shop"
+                class="btn shop-btn"
+            >
+                Shop Now →
+            </a>
+
+
+            <a
+                href="#categories"
+                class="btn explore-btn"
+            >
+                Explore
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero-image">
+
+        <div class="hero-box">
+
+            🧶
+
+            <br>
+
+            <span class="hero-box-text">
+
+                Your beautiful<br>
+                products go here ♡
+
+            </span>
+
+        </div>
+
+
+        <span class="doodle doodle-one">
+
+            Made<br>
+            for you ♡
+
+        </span>
+
+
+        <span class="doodle doodle-two">
+
+            good things<br>
+            take time ♡
+
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section
+    class="categories"
+    id="categories"
+>
+
+
+    <button
+        class="category"
+        onclick="filterProducts('all')"
+    >
+
+        <div class="category-icon">
+            ✦
+        </div>
+
+        All Products
+
+    </button>
+
+
+    <button
+        class="category"
+        onclick="filterProducts('crochet')"
+    >
+
+        <div class="category-icon">
+            🧶
+        </div>
+
+        Crochet
+
+    </button>
+
+
+    <button
+        class="category"
+        onclick="filterProducts('beaded')"
+    >
+
+        <div class="category-icon">
+            ♡
+        </div>
+
+        Beaded Jewelry
+
+    </button>
+
+
+    <button
+        class="category"
+        onclick="filterProducts('gifts')"
+    >
+
+        <div class="category-icon">
+            🎁
+        </div>
+
+        Gifts
+
+    </button>
+
+
+    <button
+        class="category"
+        onclick="filterProducts('art')"
+    >
+
+        <div class="category-icon">
+            🎨
+        </div>
+
+        Art & Stationery
+
+    </button>
+
+
+</section>
+
+
+
+<!-- ================= SHOP ================= -->
+
+<section
+    class="shop"
+    id="shop"
+>
+
+
+    <div class="shop-heading">
+
+        <div>
+
+            <p class="mini">
+                ୨୧
+            </p>
+
+
+            <h2 id="shopTitle">
+                All Products ♡
+            </h2>
+
+
+            <p class="shop-subtitle">
+                Little things, handmade with a lot of love.
+            </p>
+
+        </div>
+
+
+        <button
+            class="view-all"
+            onclick="filterProducts('all')"
+        >
+            View All →
+        </button>
+
+    </div>
+
+
+
+    <div
+        class="products"
+        id="products"
+    ></div>
+
+</section>
+
+
+
+<!-- ================= BENEFITS ================= -->
+
+<section class="benefits">
+
+
+    <div class="benefit">
+
+        🚚
+
+        <b>
+            Free Delivery
+        </b>
+
+        <small>
+            Orders over Rs. 2000
+        </small>
+
+    </div>
+
+
+    <div class="benefit">
+
+        ♡
+
+        <b>
+            Handmade
+        </b>
+
+        <small>
+            Made with love
+        </small>
+
+    </div>
+
+
+    <div class="benefit">
+
+        ♧
+
+        <b>
+            Eco Friendly
+        </b>
+
+        <small>
+            Packaging
+        </small>
+
+    </div>
+
+
+    <div class="benefit">
+
+        🎁
+
+        <b>
+            Perfect for Gifts
+        </b>
+
+        <small>
+            or just for you ♡
+        </small>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section
+    class="about"
+    id="about"
+>
+
+
+    <div class="about-photo">
+
+        ✿
+
+    </div>
+
+
+    <div>
+
+        <p class="mini">
+            ♡ Our little story ♡
+        </p>
+
+
+        <h2>
+            About Biyora
+        </h2>
+
+
+        <p>
+
+            Hi! I'm the girl behind
+            <b>biyora</b> ♡
+
+            I started this little space
+            to turn creativity into something
+            special — handmade crafts,
+            cute gifts and little things
+            that make life brighter.
+
+        </p>
+
+
+        <p>
+
+            New collections will be added
+            slowly, so every launch gets
+            its own little moment. ♡
+
+        </p>
+
+
+        <a
+            href="#contact"
+            class="btn shop-btn"
+        >
+            Get in Touch →
+
+        </a>
+
+    </div>
+
+
+    <div class="note">
+
+        Support<br>
+        Small<br>
+        Business ♡
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+
+    <div>
+
+        <h2>
+            Join Our Little World ♡
+        </h2>
+
+        <p>
+            New drops & cozy updates,
+            straight to your inbox.
+        </p>
+
+    </div>
+
+
+    <form
+        onsubmit="subscribe(event)"
+    >
+
+        <input
+            type="email"
+            placeholder="Your email address"
+            required
+        >
+
+        <button>
+            Subscribe
+        </button>
+
+    </form>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+
+    <div>
+
+        <div class="footer-logo">
+            ୨୧ <b>biyora</b> ♡
+        </div>
+
+        <p>
+            CRAFTS • GIFTS • MORE
+        </p>
+
+        <p>
+            Made with ♡ for dreamers.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Shop
+        </h3>
+
+        <a
+            href="#shop"
+            onclick="filterProducts('all')"
+        >
+            All Products
+        </a>
+
+        <a
+            href="#shop"
+            onclick="filterProducts('crochet')"
+        >
+            Crochet
+        </a>
+
+        <a
+            href="#shop"
+            onclick="filterProducts('beaded')"
+        >
+            Beaded Jewelry
+        </a>
+
+        <a
+            href="#shop"
+            onclick="filterProducts('gifts')"
+        >
+            Gifts
+        </a>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Help
+        </h3>
+
+        <a href="#">
+            FAQs
+        </a>
+
+        <a href="#">
+            Shipping
+        </a>
+
+        <a href="#">
+            Returns
+        </a>
+
+        <a href="#">
+            Privacy
+        </a>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Contact
+        </h3>
+
+        <p>
+            📍 Pakistan
+        </p>
+
+        <p>
+            ✉ hello@biyora.com
+        </p>
+
+        <p>
+            ♡ Instagram: @biyora
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+<div class="copyright">
+
+    © 2026 biyora. All rights reserved.
+
+    <span>
+        Made with ♡ for dreamers
+    </span>
+
+</div>
+
+
+
+<div id="toast"></div>
+
+
+
+<script>
+
+
+/* =====================================================
+   PRODUCTS
+   =====================================================
+
+   Yahan tum apne products add karogi.
+
+   category options:
+
+   crochet
+   beaded
+   gifts
+   art
+
+   ===================================================== */
+
+
+const products = [
+
+
+    /* CROCHET */
+
+    {
+        name:"Crochet Shoulder Bag",
+        price:1200,
+        category:"crochet",
+        emoji:"👜"
+    },
+
+
+    {
+        name:"Crochet Cherry Keychain",
+        price:350,
+        category:"crochet",
+        emoji:"🍒"
+    },
+
+
+    {
+        name:"Crochet Flower Hair Clip",
+        price:300,
+        category:"crochet",
+        emoji:"🌸"
+    },
+
+
+    /* BEADED JEWELRY */
+
+    {
+        name:"Butterfly Charm Bracelet",
+        price:450,
+        category:"beaded",
+        emoji:"🦋"
+    },
+
+
+    {
+        name:"Pastel Beaded Bracelet",
+        price:500,
+        category:"beaded",
+        emoji:"♡"
+    },
+
+
+    {
+        name:"Minimal Beaded Necklace",
+        price:650,
+        category:"beaded",
+        emoji:"📿"
+    },
+
+
+    /* GIFTS */
+
+    {
+        name:"Mini Birthday Gift Box",
+        price:900,
+        category:"gifts",
+        emoji:"🎁"
+    },
+
+
+    {
+        name:"Cute Friendship Gift Box",
+        price:1100,
+        category:"gifts",
+        emoji:"💝"
+    },
+
+
+    /* ART */
+
+    {
+        name:"Handmade Notebook",
+        price:300,
+        category:"art",
+        emoji:"📓"
+    },
+
+
+    {
+        name:"Cute Calligraphy Painting",
+        price:700,
+        category:"art",
+        emoji:"🎨"
+    }
+
+];
+
+
+
+/* CATEGORY NAMES */
+
+const categoryNames = {
+
+    all:"All Products ♡",
+
+    crochet:"Crochet Collection 🧶",
+
+    beaded:"Beaded Jewelry 📿",
+
+    gifts:"Gifts 🎁",
+
+    art:"Art & Stationery 🎨"
+
+};
+
+
+
+let currentCategory = "all";
+
+let cart = [];
+
+
+
+/* =====================================================
+   DISPLAY PRODUCTS
+   ===================================================== */
+
+function renderProducts(){
+
+    const container =
+        document.getElementById("products");
+
+
+    container.innerHTML = "";
+
+
+    let list;
+
+
+    if(currentCategory === "all"){
+
+        list = products;
+
+    }else{
+
+        list =
+            products.filter(
+                product =>
+                product.category === currentCategory
+            );
+
+    }
+
+
+
+    list.forEach(
+        (product,index)=>{
+
+
+            const card =
+                document.createElement("div");
+
+
+            card.className =
+                "product";
+
+
+            const colors =
+                ["pink","lilac","peach","rose"];
+
+
+            const color =
+                colors[index % colors.length];
+
+
+
+            card.innerHTML = `
+
+                <div
+                    class="product-image ${color}"
+                >
+
+                    <span>
+                        ${product.emoji}
+                    </span>
+
+                    <small>
+                        YOUR PRODUCT PHOTO
+                    </small>
+
+                </div>
+
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+
+                <p class="price">
+                    Rs. ${product.price.toLocaleString()}
+                </p>
+
+
+                <button
+                    class="add"
+                    onclick="
+                        addToCart(
+                            '${product.name}',
+                            ${product.price}
+                        )
+                    "
+                >
+                    🛒 Add to Cart
+                </button>
+
+            `;
+
+
+            container.appendChild(card);
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   CATEGORY FILTER
+   ===================================================== */
+
+function filterProducts(category){
+
+    currentCategory =
+        category;
+
+
+    document.getElementById(
+        "shopTitle"
+    ).textContent =
+        categoryNames[category];
+
+
+    renderProducts();
+
+
+    document.getElementById(
+        "shop"
+    ).scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+
+/* =====================================================
+   CART
+   ===================================================== */
+
+function addToCart(name,price){
+
+    cart.push({
+        name:name,
+        price:price
+    });
+
+
+    document.getElementById(
+        "cartCount"
+    ).textContent =
+        cart.length;
+
+
+    showMessage(
+        name + " added to cart ♡"
+    );
+
+}
+
+
+
+function showCart(){
+
+    if(cart.length === 0){
+
+        showMessage(
+            "Your cart is empty ♡"
+        );
+
+        return;
+
+    }
+
+
+    let total = 0;
+
+
+    cart.forEach(
+        item=>{
+            total += item.price;
+        }
+    );
+
+
+    showMessage(
+        cart.length +
+        " item(s) • Total Rs. " +
+        total.toLocaleString()
+    );
+
+}
+
+
+
+/* =====================================================
+   SEARCH
+   ===================================================== */
+
+function searchProducts(){
+
+    const search =
+        prompt(
+            "What are you looking for? ♡"
+        );
+
+
+    if(!search)
+        return;
+
+
+    const found =
+        products.find(
+            product =>
+            product.name
+            .toLowerCase()
+            .includes(
+                search.toLowerCase()
+            )
+        );
+
+
+    if(found){
+
+        filterProducts(
+            found.category
+        );
+
+
+        showMessage(
+            "Found: " +
+            found.name +
+            " ♡"
+        );
+
+    }else{
+
+        showMessage(
+            "No product found ♡"
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   NEWSLETTER
+   ===================================================== */
+
+function subscribe(event){
+
+    event.preventDefault();
+
+
+    event.target.reset();
+
+
+    showMessage(
+        "Welcome to biyora ♡"
+    );
+
+}
+
+
+
+/* =====================================================
+   MESSAGE
+   ===================================================== */
+
+function showMessage(message){
+
+    const toast =
+        document.getElementById(
+            "toast"
+        );
+
+
+    toast.textContent =
+        message;
+
+
+    toast.style.display =
+        "block";
+
+
+    clearTimeout(
+        window.toastTimer
+    );
+
+
+    window.toastTimer =
+        setTimeout(
+            ()=>{
+                toast.style.display =
+                    "none";
+            },
+            2200
+        );
+
+}
+
+
+
+/* LOAD PRODUCTS */
+
+renderProducts();
+
+</script>
+
+
+</body>
+</html>
